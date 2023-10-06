@@ -4,8 +4,29 @@
 			"id": "001",
 			"login": "ksts",
 			"password": "qwerty1234",
-			"registered_at": "2013-03-09",
+			"registered_at": "2023-03-09",
 			"role_id": 0
+		},
+		{
+			"id": "002",
+			"login": "nick",
+			"password": "trewq25",
+			"registered_at": "2023-03-22",
+			"role_id": 1
+		},
+		{
+			"id": "003",
+			"login": "serge",
+			"password": "asdfg67",
+			"registered_at": "2023-05-14",
+			"role_id": 2
+		},
+		{
+			"id": "004",
+			"login": "nika",
+			"password": "nikame",
+			"registered_at": "2023-08-26",
+			"role_id": 2
 		}
 	],
 	"roles": [
@@ -70,5 +91,12 @@
 			"published_at": "2020-04-09"
 		}
 	],
-	"comments": [{}]
+	"comments": [
+		{
+			"id": "",
+			"author_id": "",
+			"post_id": "",
+			"content": ""
+		}
+	]
 }
