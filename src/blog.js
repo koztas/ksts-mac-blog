@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './components';
-import { Authorization } from './pages';
+import { Authorization, Registration } from './pages';
 import styled from 'styled-components';
 
 const AppColumn = styled.div`
@@ -23,14 +23,14 @@ export const Blog = () => {
 			<Header />
 			<Content>
 				<Routes>
-					<Route path="/" element={<div>Main page</div>}></Route>
-					<Route path="/login" element={<Authorization />}></Route>
-					<Route path="/register" element={<div>Registration</div>}></Route>
-					<Route path="/users" element={<div>Users</div>}></Route>
-					<Route path="/post/:postId" element={<div>Post</div>}></Route>
-					<Route path="/post" element={<div>New post</div>}></Route>
-					<Route path="/post" element={<div>New post</div>}></Route>
-					<Route path="/post" element={<div>New post</div>}></Route>
+					<Route path="/" element={<div>Main page</div>} />
+					<Route path="/login" element={<Authorization />} />
+					<Route path="/register" element={<Registration />} />
+					<Route path="/users" element={<div>Users</div>} />
+					<Route path="/post/:postId" element={<div>Post</div>} />
+					<Route path="/post" element={<div>New post</div>} />
+					<Route path="/post" element={<div>New post</div>} />
+					<Route path="/post" element={<div>New post</div>} />
 				</Routes>
 			</Content>
 			<Footer />
