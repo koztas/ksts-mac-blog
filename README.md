@@ -25,7 +25,7 @@
 
 Схема для redux store (на клиенте)(redux store scheme(on the client)):
 
-    - 	user: id / login / roleId
+    - 	user: id / login / roleId / session
     - 	posts: массив post (posts array): id / title / imageUrl / publishedAt /  commentsCount
     - 	post: id / title / imageUrl / content / publishedAt / comments:
     	массив comment (comments array): id / author / content / piblishedAt

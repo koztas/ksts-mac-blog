@@ -1,40 +1,70 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Icon } from '../../../../components';
+import { useDispatch, useSelector } from 'react-redux';
+import { Button, Icon } from '../../../../components';
+import { ROLE } from '../../../../constants';
+import {
+	selectUserLogin,
+	selectUserRole,
+	selectUserSession,
+} from '../../../../selectors';
+import { logout } from '../../../../actions';
 import styled from 'styled-components';
 
 const RightAligned = styled.div`
 	display: flex;
 	justify-content: flex-end;
-`;
-
-const StyledLink = styled(Link)`
-	display: flex;
-	justify-content: center;
 	align-items: center;
-	font-size: 18px;
-	width: 100px;
-	height: 32px;
-	border: 1px solid #000;
-	background-color: #eee;
 `;
 
-const StyledButton = styled.div`
+const StyledIcon = styled.div`
 	&:hover {
 		cursor: pointer;
 	}
 `;
 
+// const StyledLogoutIcon = styled.div`
+// 	margin: 0 0 10px 10px;
+// 	&:hover {
+// 		cursor: pointer;
+// 	}
+// `;
+
+const UserName = styled.div`
+	font-size: 18px;
+	font-weight: bold;
+`;
+
 const ControlPanelContainer = ({ className }) => {
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
+	const roleId = useSelector(selectUserRole);
+	const login = useSelector(selectUserLogin);
+	const session = useSelector(selectUserSession);
+
 	return (
 		<div className={className}>
 			<RightAligned>
-				<StyledLink to="/login">Login</StyledLink>
+				{roleId === ROLE.GUEST ? (
+					<Button>
+						<Link to="/login">Login</Link>
+					</Button>
+				) : (
+					<>
+						<UserName>{login}</UserName>
+						<StyledIcon>
+							<Icon
+								id="fa-sign-out"
+								margin="0 0 0 10px"
+								onClick={() => dispatch(logout(session))}
+							/>
+						</StyledIcon>
+					</>
+				)}
 			</RightAligned>
 			<RightAligned>
-				<StyledButton onClick={() => navigate(-1)}>
+				<StyledIcon onClick={() => navigate(-1)}>
 					<Icon id="fa-backward" margin="10px 0 0 0" />
-				</StyledButton>
+				</StyledIcon>
 				<Link to="/post">
 					<Icon id="fa-file-text-o" margin="10px 0 0 16px" />
 				</Link>
