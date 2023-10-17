@@ -21,13 +21,13 @@
       "registered_at": "2023-05-14",
       "role_id": 2
     },
-    {
-      "login": "oleg",
-      "password": "zxcvb1234",
-      "registed_at": "2052-12-27T12:52",
-      "role_id": 2,
-      "id": "Uwewswz"
-    }
+	{
+		"login": "oleg",
+		"password": "zxcvb1234",
+		"registered_at": "2052-12-27",
+		"role_id": 2,
+		"id": "Uwewswz"
+	  }
   ],
   "roles": [
     {
