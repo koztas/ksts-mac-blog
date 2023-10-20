@@ -102,16 +102,23 @@
     {
       "author_id": "001",
       "post_id": "002",
-      "published_at": "2065-01-19 22:21",
-      "content": "One, two, three",
+      "published_at": "2047-04-24 05:32",
+      "content": "first comment",
       "id": 1
     },
     {
       "author_id": "001",
       "post_id": "002",
-      "published_at": "2033-12-01 11:03",
-      "content": "More comments",
+      "published_at": "2035-11-01 14:49",
+      "content": "second comment",
       "id": 2
+    },
+    {
+      "author_id": "001",
+      "post_id": "002",
+      "published_at": "2053-02-21 18:45",
+      "content": "more comments",
+      "id": 3
     }
   ],
   "sessions": [
@@ -127,7 +134,7 @@
       "id": 1
     },
     {
-      "hash": "0.26516905854459049685090121784014627337455749511719",
+      "hash": "0.85903413915078608020792216848349198698997497558594",
       "user": {
         "id": "001",
         "login": "ksts",
