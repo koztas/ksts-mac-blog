@@ -5,5 +5,6 @@ export * from './open-modal';
 export * from './load-post-async';
 export * from './logout';
 export * from './remove-comment-async';
+export * from './save-post-async';
 export * from './set-user';
 export * from './set-post-data';
