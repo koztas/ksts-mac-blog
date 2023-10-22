@@ -140,6 +140,34 @@
       "published_at": "2044-04-07 15:58",
       "content": "comment3",
       "id": 3
+    },
+    {
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2049-09-22 09:03",
+      "content": "first comment",
+      "id": 4
+    },
+    {
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2051-07-27 19:20",
+      "content": "second comment",
+      "id": 5
+    },
+    {
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2053-04-25 07:53",
+      "content": "third comment",
+      "id": 6
+    },
+    {
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2047-05-01 19:09",
+      "content": "fourth comment",
+      "id": 7
     }
   ],
   "sessions": [
