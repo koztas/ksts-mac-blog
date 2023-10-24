@@ -325,13 +325,6 @@
     },
     {
       "author_id": "001",
-      "post_id": "005",
-      "published_at": "2037-04-13 22:56",
-      "content": "comment7",
-      "id": 27
-    },
-    {
-      "author_id": "001",
       "post_id": "yj66ulB",
       "published_at": "2036-08-29 15:54",
       "content": "like",
@@ -420,6 +413,20 @@
       "published_at": "2051-12-13 15:30",
       "content": "comment9",
       "id": 40
+    },
+    {
+      "author_id": "5mCI6qk",
+      "post_id": "003",
+      "published_at": "2051-05-18 08:15",
+      "content": "scnd commet from nika",
+      "id": 42
+    },
+    {
+      "author_id": "5mCI6qk",
+      "post_id": "003",
+      "published_at": "2047-08-17 15:39",
+      "content": "more comments from nika",
+      "id": 43
     }
   ],
   "sessions": [
