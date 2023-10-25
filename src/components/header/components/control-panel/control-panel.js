@@ -41,7 +41,7 @@ const ControlPanelContainer = ({ className }) => {
 			<RightAligned>
 				{roleId === ROLE.GUEST ? (
 					<Button>
-						<Link to="/login">Login</Link>
+						<Link to="/login">Вход</Link>
 					</Button>
 				) : (
 					<>

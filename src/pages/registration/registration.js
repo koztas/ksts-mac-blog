@@ -15,26 +15,23 @@ import styled from 'styled-components';
 const regFormSchema = yup.object().shape({
 	login: yup
 		.string()
-		.required('Enter login')
-		.matches(
-			/^\w+$/,
-			'Invalid characters in login. Accepted characters: letters and numbers only.',
-		)
-		.min(3, 'Invalid login length. Minimum 3 characters')
-		.max(15, 'Invalid login length. Maximum 15 characters'),
+		.required('Введите логин')
+		.matches(/^\w+$/, 'Неверные символы. Вводите латиницей только буквы и цифры.')
+		.min(3, 'Неверное количество символов. Минимум три символа')
+		.max(15, 'Неверное количество символов. Максимум 15 символов'),
 	password: yup
 		.string()
-		.required('Enter password')
+		.required('Введите пароль')
 		.matches(
 			/^[\w#%]+$/,
-			'Invalid characters in password. Accepted characters: letters, numbers, #, % only.',
+			'Неверные символы для пароля. Допустимы только буквы, цифры, # и %',
 		)
-		.min(6, 'nvalid password length. Minimum 6 characters')
-		.max(30, 'nvalid password length. Maximum 30 characters'),
+		.min(6, 'Неверная длина пароля. Минимум три символа')
+		.max(30, 'Неверная длина пароля. Максиимум 15 символов'),
 	passcheck: yup
 		.string()
-		.required('Fill in repeat password')
-		.oneOf([yup.ref('password'), null], 'Passwords mismatch'),
+		.required('Введите пароль еще раз')
+		.oneOf([yup.ref('Пароль'), null], 'Пароли не совпадают! Попробуйте еще раз'),
 });
 
 const RegistrationContainer = ({ className }) => {
@@ -82,31 +79,31 @@ const RegistrationContainer = ({ className }) => {
 
 	return (
 		<div className={className}>
-			<H2>Registration</H2>
+			<H2>Регистрация</H2>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<Input
 					type="text"
-					placeholder="Login"
+					placeholder="Логин"
 					{...register('login', {
 						onchange: () => setServerError(null),
 					})}
 				/>
 				<Input
 					type="password"
-					placeholder="Password"
+					placeholder="Пароль"
 					{...register('password', {
 						onchange: () => setServerError(null),
 					})}
 				/>
 				<Input
 					type="password"
-					placeholder="Check password"
+					placeholder="Повтор пароля"
 					{...register('passcheck', {
 						onchange: () => setServerError(null),
 					})}
 				/>
 				<Button type="submit" disabled={!!formError}>
-					Register
+					Регистрация
 				</Button>
 				{errorMessage && <AuthFormError>{errorMessage}</AuthFormError>}
 			</form>

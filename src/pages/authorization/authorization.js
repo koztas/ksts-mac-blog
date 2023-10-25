@@ -15,22 +15,16 @@ import styled from 'styled-components';
 const authFormSchema = yup.object().shape({
 	login: yup
 		.string()
-		.required('Enter login')
-		.matches(
-			/^\w+$/,
-			'Invalid characters in login. Accepted characters: letters and numbers only.',
-		)
-		.min(3, 'Invalid login length. Minimum 3 characters')
-		.max(15, 'Invalid login length. Maximum 15 characters'),
+		.required('Ведите логин')
+		.matches(/^\w+$/, 'Неверные символы. Вводите латиницей буквы и цифры')
+		.min(3, 'Неверное количество символов. Минимум три символа')
+		.max(15, 'Неверное количество символов. Максимум 15 символов'),
 	password: yup
 		.string()
-		.required('Enter password')
-		.matches(
-			/^[\w#%]+$/,
-			'Invalid characters in password. Accepted characters: letters, numbers, #, % only.',
-		)
-		.min(6, 'nvalid password length. Minimum 6 characters')
-		.max(30, 'nvalid password length. Maximum 30 characters'),
+		.required('Ведите пароль')
+		.matches(/^[\w#%]+$/, 'Неверные символы. Используйте только буквы, цифры, # и %')
+		.min(6, 'Неверная длина пароля. Минимум 6 символов')
+		.max(30, 'Неверная длина пароля. Максимум 30 символов'),
 });
 
 const StyledLink = styled(Link)`
@@ -83,27 +77,27 @@ const AuthorizationContainer = ({ className }) => {
 
 	return (
 		<div className={className}>
-			<H2>Authorization</H2>
+			<H2>Авторизация</H2>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<Input
 					type="text"
-					placeholder="Login"
+					placeholder="Логин"
 					{...register('login', {
 						onchange: () => setServerError(null),
 					})}
 				/>
 				<Input
 					type="password"
-					placeholder="Password"
+					placeholder="Пароль"
 					{...register('password', {
 						onchange: () => setServerError(null),
 					})}
 				/>
 				<Button type="submit" disabled={!!formError}>
-					Enter
+					Вход
 				</Button>
 				{errorMessage && <AuthFormError>{errorMessage}</AuthFormError>}
-				<StyledLink to="/register">Registration</StyledLink>
+				<StyledLink to="/register">Регистрация</StyledLink>
 			</form>
 		</div>
 	);

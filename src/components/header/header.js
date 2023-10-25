@@ -9,11 +9,11 @@ const HeaderContainer = ({ className }) => (
 	<header className={className}>
 		<Logo />
 		<Discription>
-			Web technologies
+			Веб-технологии
 			<br />
-			Writing code
+			Создание кода
 			<br />
-			Troubleshooting
+			Разбор ошибок
 		</Discription>
 		<ControlPanel />
 	</header>

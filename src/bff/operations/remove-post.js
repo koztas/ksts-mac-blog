@@ -9,7 +9,7 @@ export const removePost = async (hash, id) => {
 
 	if (!access) {
 		return {
-			error: 'Access denied',
+			error: 'Доступ закрыт!',
 			res: null,
 		};
 	}

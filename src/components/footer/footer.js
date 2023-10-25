@@ -8,7 +8,7 @@ const FooterContainer = ({ className }) => {
 
 	useEffect(() => {
 		fetch(
-			'https://api.openweathermap.org/data/2.5/weather?q=Moscow&lang=en&units=metric&appid=ae49b33997932dde34168c157d509475',
+			'https://api.openweathermap.org/data/2.5/weather?q=Moscow&lang=ru&units=metric&appid=ae49b33997932dde34168c157d509475',
 		)
 			.then((res) => res.json())
 			.then(({ name, main, weather }) => {
@@ -20,7 +20,7 @@ const FooterContainer = ({ className }) => {
 	return (
 		<div className={className}>
 			<div>
-				<div>Web developer blog</div>
+				<div>Блог о веб-разработке</div>
 				<div>web@developer.ru</div>
 			</div>
 			<div>
@@ -29,7 +29,7 @@ const FooterContainer = ({ className }) => {
 					{new Date().toLocaleString('ru', { day: 'numeric', month: 'long' })}
 				</div>
 				<div>
-					{temperature} degrees, {weather}
+					{temperature} гр., {weather}
 				</div>
 			</div>
 		</div>

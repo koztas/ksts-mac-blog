@@ -1,4 +1,4 @@
 export const ERROR = {
-	PAGE_NOT_EXIST: "This page doesn't exist",
-	ACCESS_DENIED: 'Access is denied',
+	PAGE_NOT_EXIST: 'Такая страница не существует',
+	ACCESS_DENIED: 'Доступ закрыт!',
 };

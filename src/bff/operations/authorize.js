@@ -6,7 +6,7 @@ export const authorize = async (authLogin, authPassword) => {
 
 	if (!user) {
 		return {
-			error: 'Such user not found',
+			error: 'Пользователь не нвайден',
 			res: null,
 		};
 	}
@@ -15,7 +15,7 @@ export const authorize = async (authLogin, authPassword) => {
 
 	if (authPassword !== password) {
 		return {
-			error: 'Incorrect password',
+			error: 'Неверный пароль!',
 			res: null,
 		};
 	}

@@ -9,7 +9,7 @@ export const removeUser = async (hash, userId) => {
 
 	if (!access) {
 		return {
-			error: 'Access denied',
+			error: 'Доступ закрыт!',
 			res: null,
 		};
 	}

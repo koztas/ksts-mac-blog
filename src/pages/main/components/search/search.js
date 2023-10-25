@@ -7,7 +7,7 @@ const SearchContainer = ({ className, searchPhrase, onChange }) => {
 		<div className={className}>
 			<Input
 				value={searchPhrase}
-				placeholder="Title search ..."
+				placeholder="Поиск по заголовку ..."
 				onChange={onChange}
 			/>
 			<Icon inactive={true} id="fa-search" size="20px" />

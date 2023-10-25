@@ -50,7 +50,7 @@ const MainContainer = ({ className }) => {
 						)}
 					</div>
 				) : (
-					<div className="no-posts-found">No posts found</div>
+					<div className="no-posts-found">Такой статьи не найдено</div>
 				)}
 			</div>
 			{(lastPage > 1 || posts.lenght > 0) && (

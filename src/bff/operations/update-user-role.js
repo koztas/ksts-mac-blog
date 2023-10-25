@@ -9,7 +9,7 @@ export const updateUserRole = async (hash, userId, newUserRoleId) => {
 
 	if (!access) {
 		return {
-			error: 'Access denied',
+			error: 'Доступ закрыт!',
 			res: null,
 		};
 	}

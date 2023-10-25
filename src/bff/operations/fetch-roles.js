@@ -9,7 +9,7 @@ export const fetchRoles = async (hash) => {
 
 	if (!access) {
 		return {
-			error: 'Access denied',
+			error: 'Доступ закрыт!',
 			res: null,
 		};
 	}

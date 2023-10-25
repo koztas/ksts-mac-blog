@@ -25,10 +25,10 @@ const ModalContainer = ({ className }) => {
 				<h3>{text}</h3>
 				<div className="buttons">
 					<Button width="120px" onClick={onConfirm}>
-						Confirm
+						ДА
 					</Button>
 					<Button width="120px" onClick={onCancel}>
-						Cancel
+						НЕТ
 					</Button>
 				</div>
 			</div>

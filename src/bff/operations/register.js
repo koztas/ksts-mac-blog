@@ -6,7 +6,7 @@ export const register = async (regLogin, regPassword) => {
 
 	if (existedUser) {
 		return {
-			error: 'This login is already taken',
+			error: 'Такой логин уже занят',
 			res: null,
 		};
 	}

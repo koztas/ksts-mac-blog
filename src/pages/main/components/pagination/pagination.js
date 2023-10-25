@@ -6,19 +6,19 @@ const PaginationContainer = ({ className, page, lastPage, setPage }) => {
 	return (
 		<div className={className}>
 			<Button disabled={page === 1} onClick={() => setPage(1)}>
-				Back to top
+				В начало
 			</Button>
 			<Button disabled={page === 1} onClick={() => setPage(page - 1)}>
-				Previous
+				Предыдущая
 			</Button>
 
-			<div className="current-page">Page: {page}</div>
+			<div className="current-page">Страница: {page}</div>
 
 			<Button disabled={page === lastPage} onClick={() => setPage(page + 1)}>
-				Next
+				Следующая
 			</Button>
 			<Button disabled={page === lastPage} onClick={() => setPage(lastPage)}>
-				To the end
+				В конец
 			</Button>
 		</div>
 	);

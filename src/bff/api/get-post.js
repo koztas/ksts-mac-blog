@@ -9,8 +9,8 @@ export const getPost = async (postId) =>
 
 			const error =
 				res.status === 404
-					? "This page doesn't exist"
-					: 'Something went wrong. Please, try again ...';
+					? 'Такой страницы не существует'
+					: 'Что-то пошло не так. Попробуйте еще раз...';
 
 			return Promise.reject(error);
 		})

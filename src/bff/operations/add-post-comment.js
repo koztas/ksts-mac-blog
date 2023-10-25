@@ -10,7 +10,7 @@ export const addPostComment = async (hash, postId, userId, content) => {
 
 	if (!access) {
 		return {
-			error: 'Access denied',
+			error: 'Доступ закрыт!',
 			res: null,
 		};
 	}
